@@ -2,10 +2,12 @@
 
 work_dir='../public'
 
-for f in $work_dir/*.md ; do
-	base_name="$(basename $f .md)"
-	cat $work_dir/$f | \
-		md2html -template $work_dir/template.html > \
-        $work_dir/$base_name.html
-done
+#find $work_dir -name '*.md' -print
 
+# loop over all the md files and convert them to html
+for i in $(find $work_dir -name '*.md' -type f -print) ; do
+	base_name=$(echo $i | sed 's/\.md/\.html/')
+	cat $i \
+		| md2html -template $work_dir/template.html \
+		> $base_name
+done
