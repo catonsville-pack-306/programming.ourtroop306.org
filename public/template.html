@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{if .Title }} {{ .Title }} {{end}}</title>
+	<meta name="generator" content="md2html" />
+	<!-- Scout Troop 306 of Catonsville, Maryland -->
+</head>
+<body>
+	<div id="content">
+		{{if .Content}} {{ .Content }} {{end}}
+	</div>
+	<hr>
+	<div id="footer">
+		{{if .Date}}<span id="generated">{{ .Date }}</span>{{end}}
+	</div>
+</body>
+</html>
