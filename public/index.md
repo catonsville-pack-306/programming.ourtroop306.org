@@ -1,3 +1,4 @@
+
 # Programming Merit Badge
 
 Content to be added soon!
